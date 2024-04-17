@@ -312,7 +312,7 @@ class _DropDownTextFieldState extends State<DropDownTextField>
           !_textFieldFocusNode.hasFocus &&
           _isExpanded) {
         _isExpanded = !_isExpanded;
-        hideOverlay();
+        // hideOverlay();
         if (!widget.readOnly &&
             widget.singleController?.dropDownValue?.name != _cnt.text) {
           setState(() {
@@ -622,9 +622,9 @@ class _DropDownTextFieldState extends State<DropDownTextField>
         : _isScrollPadding
             ? size.height - (_keyboardHeight - posFromBot)
             : size.height;
-    if (_isOutsideClickOverlay) {
-      _openOutSideClickOverlay(context);
-    }
+    // if (_isOutsideClickOverlay) {
+    _openOutSideClickOverlay(context);
+    // }
     _entry = OverlayEntry(
       builder: (context) => Positioned(
           width: size.width,
